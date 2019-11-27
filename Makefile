@@ -2,13 +2,13 @@ CC = g++
 #OPT = -O3
 OPT = -g
 WARN = -Wall
-CFLAGS = $(OPT) $(WARN) $(INC) $(LIB)
+CFLAGS = $(OPT) $(WARN) $(INC) $(LIB) -std=c++11
 
 # List all your .cc/.cpp files here (source files, excluding header files)
-SIM_SRC = sim_proc.cc
+SIM_SRC = sim_proc.cc scheduler.cc
 
 # List corresponding compiled object files here (.o files)
-SIM_OBJ = sim_proc.o
+SIM_OBJ = sim_proc.o scheduler.o
  
 #################################
 
@@ -21,7 +21,7 @@ all: sim
 # rule for making sim
 
 sim: $(SIM_OBJ)
-	$(CC) -o sim $(CFLAGS) $(SIM_OBJ) -lm
+	$(CC) -o sim $(CFLAGS) $(SIM_OBJ) -lm 
 	@echo "-----------DONE WITH sim-----------"
 
 
