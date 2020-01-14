@@ -5,10 +5,10 @@ WARN = -Wall
 CFLAGS = $(OPT) $(WARN) $(INC) $(LIB) -std=c++11
 
 # List all your .cc/.cpp files here (source files, excluding header files)
-SIM_SRC = sim_proc.cc scheduler.cc
+SIM_SRC = sim_proc.cc scheduler.cc cache.cc
 
 # List corresponding compiled object files here (.o files)
-SIM_OBJ = sim_proc.o scheduler.o
+SIM_OBJ = sim_proc.o scheduler.o cache.o
  
 #################################
 
